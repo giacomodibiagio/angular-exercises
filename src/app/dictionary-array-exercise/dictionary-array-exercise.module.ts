@@ -4,6 +4,7 @@ import {DictionaryArrayExerciseComponent} from "./dictionary-array-exercise.comp
 import {RouterModule} from "@angular/router";
 import {MatListModule} from "@angular/material/list";
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatCardModule} from "@angular/material/card";
 
 
 
@@ -18,7 +19,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
       }
     ]),
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule
   ]
 })
 export class DictionaryArrayExerciseModule { }
