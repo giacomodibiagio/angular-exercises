@@ -14,7 +14,7 @@ import {AbstractControl, FormArray, FormBuilder, FormGroup, Validators} from "@a
         </mat-card-header>
 
         <!--content-->
-        <ng-container formArrayName="items" *ngFor="let item of items.controls; let i = index; let last = last">
+        <ng-container formArrayName="users" *ngFor="let user of users.controls; let i = index; let last = last">
           <div [formGroupName]="i" class="form-group form-inline">
             <div class="row">
               <div class="col-md-5">
@@ -28,10 +28,10 @@ import {AbstractControl, FormArray, FormBuilder, FormGroup, Validators} from "@a
                 </mat-form-field>
               </div>
               <div class="col-md-1 icon">
-                <mat-icon (click)="addUser()" *ngIf="item?.valid && last">add_circle</mat-icon>
+                <mat-icon (click)="addUser()" *ngIf="user?.valid && last">add_circle</mat-icon>
               </div>
               <div class="col-md-1 icon">
-                <mat-icon (click)="removeUser(item)" *ngIf="items.controls.length > 1">remove_circle</mat-icon>
+                <mat-icon (click)="removeUser(user)" *ngIf="users.controls.length > 1">remove_circle</mat-icon>
               </div>
             </div>
           </div>
@@ -63,18 +63,18 @@ import {AbstractControl, FormArray, FormBuilder, FormGroup, Validators} from "@a
 })
 export class FormArrayExerciseComponent {
   form: FormGroup;
-  items: FormArray;
+  users: FormArray;
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      items: this.fb.array([ ]) as AbstractControl
+      users: this.fb.array([ ]) as AbstractControl
     });
-    this.items = this.form.get('items') as FormArray;
+    this.users = this.form.get('users') as FormArray;
     this.addUser();
   }
 
   addUser(): void {
-    this.items.push(
+    this.users.push(
       this.fb.group({
         firstName: ['',  Validators.required],
         lastName: ['',  Validators.required],
@@ -82,13 +82,13 @@ export class FormArrayExerciseComponent {
     );
   }
 
-  removeUser(item: AbstractControl): void {
-    const index = this.items.controls.indexOf(item);
-    this.items.removeAt(index);
+  removeUser(user: AbstractControl): void {
+    const index = this.users.controls.indexOf(user);
+    this.users.removeAt(index);
   }
 
   submit() {
-    alert('Users: ' + JSON.stringify(this.form.value.items));
+    console.log(this.form.value)
   }
 
 
