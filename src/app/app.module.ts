@@ -17,6 +17,8 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import { HeaderComponent } from './header.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
+import { DictionaryArrayExerciseComponent } from './dictionary-array-exercise/dictionary-array-exercise.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -29,14 +31,18 @@ import {MatToolbarModule} from "@angular/material/toolbar";
   imports: [
     RouterModule.forRoot([
       {
+        path: 'reactive-forms-basics-exercise',
+        loadChildren: () => import('./reactive-forms-basics-exercise/reactive-forms-basics-exercise.module').then(m => m.ReactiveFormsBasicsExerciseModule)
+      },
+      {
         path: 'form-array-exercise',
         loadChildren: () => import('./form-array-exercise/form-array-exercise.module').then(m => m.FormArrayExerciseModule)
       },
       {
-        path: 'reactive-forms-basics-exercise',
-        loadChildren: () => import('./reactive-forms-basics-exercise/reactive-forms-basics-exercise.module').then(m => m.ReactiveFormsBasicsExerciseModule)
+        path: 'dictionary-array-exercise',
+        loadChildren: () => import('./dictionary-array-exercise/dictionary-array-exercise.module').then(m => m.DictionaryArrayExerciseModule)
       },
-      {path: '', redirectTo: 'form-array-exercise', pathMatch: 'full'},
+      {path: '', redirectTo: 'reactive-forms-basics-exercise', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent}
     ]),
     BrowserModule,
@@ -49,7 +55,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
