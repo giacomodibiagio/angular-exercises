@@ -70,7 +70,7 @@ import {FormBuilder, Validators} from "@angular/forms";
     }
 
     .form-container{
-      margin: 100px;
+      margin: 80px;
     }
   `]
 })
