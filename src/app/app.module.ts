@@ -17,7 +17,6 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import { HeaderComponent } from './header.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
-import { DictionaryArrayExerciseComponent } from './dictionary-array-exercise/dictionary-array-exercise.component';
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
@@ -41,6 +40,10 @@ import {HttpClientModule} from "@angular/common/http";
       {
         path: 'dictionary-array-exercise',
         loadChildren: () => import('./dictionary-array-exercise/dictionary-array-exercise.module').then(m => m.DictionaryArrayExerciseModule)
+      },
+      {
+        path: 'custom-pipe-exercise',
+        loadChildren: () => import('./custom-pipe-exercise/custom-pipe-exercise.module').then(m => m.CustomPipeExerciseModule)
       },
       {path: '', redirectTo: 'reactive-forms-basics-exercise', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent}
