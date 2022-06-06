@@ -45,6 +45,10 @@ import {HttpClientModule} from "@angular/common/http";
         path: 'custom-pipe-exercise',
         loadChildren: () => import('./custom-pipe-exercise/custom-pipe-exercise.module').then(m => m.CustomPipeExerciseModule)
       },
+      {
+        path: 'custom-directive-exercise',
+        loadChildren: () => import('./custom-directive-exercise/custom-directive-exercise.module').then(m => m.CustomDirectiveExerciseModule)
+      },
       {path: '', redirectTo: 'reactive-forms-basics-exercise', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent}
     ]),
