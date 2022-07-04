@@ -49,6 +49,14 @@ import {HttpClientModule} from "@angular/common/http";
         path: 'custom-directive-exercise',
         loadChildren: () => import('./custom-directive-exercise/custom-directive-exercise.module').then(m => m.CustomDirectiveExerciseModule)
       },
+      {
+        path: 'observables-exercise',
+        loadChildren: () => import('./observables-exercise/observable-exercise.module').then(m => m.ObservableExerciseModule)
+      },
+      {
+        path: 'observables-list-exercise',
+        loadChildren: () => import('./observables-list-exercise/observables-list-exercise.module').then(m => m.ObservablesListExerciseModule)
+      },
       {path: '', redirectTo: 'reactive-forms-basics-exercise', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent}
     ]),

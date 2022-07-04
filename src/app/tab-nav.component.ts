@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
       <a mat-tab-link routerLink="/dictionary-array-exercise" routerLinkActive="active-link">dictionary-array-exercise</a>
       <a mat-tab-link routerLink="/custom-pipe-exercise" routerLinkActive="active-link">custom-pipe-exercise</a>
       <a mat-tab-link routerLink="/custom-directive-exercise" routerLinkActive="active-link">custom-directive-exercise</a>
+      <a mat-tab-link routerLink="/observables-exercise" routerLinkActive="active-link">observables-exercise</a>
+      <a mat-tab-link routerLink="/observables-list-exercise" routerLinkActive="active-link">observables-list-exercise</a>
     </nav>
     <mat-tab-nav-panel #tabPanel>
       <div class="container mt-5">
