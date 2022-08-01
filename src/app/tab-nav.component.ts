@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
       <a mat-tab-link routerLink="/custom-directive-exercise" routerLinkActive="active-link">custom-directive-exercise</a>
       <a mat-tab-link routerLink="/observables-exercise" routerLinkActive="active-link">observables-exercise</a>
       <a mat-tab-link routerLink="/observables-list-exercise" routerLinkActive="active-link">observables-list-exercise</a>
+      <a mat-tab-link routerLink="/slider-check-exercise" routerLinkActive="active-link">slider-check-exercise</a>
     </nav>
     <mat-tab-nav-panel #tabPanel>
       <div class="container mt-5">

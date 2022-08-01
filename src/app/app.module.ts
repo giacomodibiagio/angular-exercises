@@ -12,12 +12,13 @@ import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatRadioModule} from "@angular/material/radio";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import { HeaderComponent } from './header.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {HttpClientModule} from "@angular/common/http";
+import { SliderCheckExerciseComponent } from './slider-check-exercise/slider-check-exercise.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {HttpClientModule} from "@angular/common/http";
     TabNavComponent,
     ReactiveFormsBasicsExerciseComponent,
     HeaderComponent,
+    SliderCheckExerciseComponent,
   ],
   imports: [
     RouterModule.forRoot([
@@ -57,6 +59,10 @@ import {HttpClientModule} from "@angular/common/http";
         path: 'observables-list-exercise',
         loadChildren: () => import('./observables-list-exercise/observables-list-exercise.module').then(m => m.ObservablesListExerciseModule)
       },
+      {
+        path: 'slider-check-exercise',
+        loadChildren: () => import('./slider-check-exercise/slider-check-exercise.module').then(m => m.SliderCheckExerciseModule)
+      },
       {path: '', redirectTo: 'reactive-forms-basics-exercise', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent}
     ]),
@@ -71,7 +77,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatInputModule,
     MatButtonModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
