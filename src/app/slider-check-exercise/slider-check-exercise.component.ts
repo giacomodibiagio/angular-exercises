@@ -1,14 +1,15 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-slider-check-exercise',
   template: `
-    <input type="range" [(ngModel)]="value" [max]="maxValue" [min]="0" class="pullee" />
+    <input [disabled]="disable" type="range" [ngClass]="{'disabled': disable}" [(ngModel)]="value" [max]="maxValue" [min]="0" class="pullee" />
   `,
   styleUrls: ['./slider-check-exercise.component.scss']
 })
 export class SliderCheckExerciseComponent implements OnInit {
 
+  @Input() disable:boolean = false
   @Output() onSlideComplete = new EventEmitter<any>();
 
   constructor() { }
