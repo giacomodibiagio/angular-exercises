@@ -19,6 +19,7 @@ import { HeaderComponent } from './header.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {HttpClientModule} from "@angular/common/http";
 import { SliderCheckExerciseComponent } from './slider-check-exercise/slider-check-exercise.component';
+import { MergemapSwitchmapExerciseComponent } from './mergemap-switchmap-exercise/mergemap-switchmap-exercise.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,10 @@ import { SliderCheckExerciseComponent } from './slider-check-exercise/slider-che
       {
         path: 'slider-check-exercise',
         loadChildren: () => import('./slider-check-exercise/slider-check-exercise.module').then(m => m.SliderCheckExerciseModule)
+      },
+      {
+        path: 'mergemap-switchmap-exercise',
+        loadChildren: () => import('./mergemap-switchmap-exercise/mergemap-switchmap-exercise.module').then(m => m.MergemapSwitchmapExerciseModule)
       },
       {path: '', redirectTo: 'reactive-forms-basics-exercise', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent}

@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
       <a mat-tab-link routerLink="/observables-exercise" routerLinkActive="active-link">observables-exercise</a>
       <a mat-tab-link routerLink="/observables-list-exercise" routerLinkActive="active-link">observables-list-exercise</a>
       <a mat-tab-link routerLink="/slider-check-exercise" routerLinkActive="active-link">slider-check-exercise</a>
+      <a mat-tab-link routerLink="/mergemap-switchmap-exercise" routerLinkActive="active-link">mergemap-switchmap-exercise</a>
     </nav>
     <mat-tab-nav-panel #tabPanel>
       <div class="container mt-5">
