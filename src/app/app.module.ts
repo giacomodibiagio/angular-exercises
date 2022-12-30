@@ -19,7 +19,6 @@ import { HeaderComponent } from './header.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {HttpClientModule} from "@angular/common/http";
 import { SliderCheckExerciseComponent } from './slider-check-exercise/slider-check-exercise.component';
-import { MergemapSwitchmapExerciseComponent } from './mergemap-switchmap-exercise/mergemap-switchmap-exercise.component';
 
 @NgModule({
   declarations: [

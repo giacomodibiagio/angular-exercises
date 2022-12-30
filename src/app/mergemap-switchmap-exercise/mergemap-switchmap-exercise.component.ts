@@ -54,5 +54,12 @@ export class MergemapSwitchmapExerciseComponent implements AfterViewInit {
     //concatMap():quando l'outer obs emette un valore, l'inner obs sottoscrive MA se l'outer obs emette un altro valore prima che la sottoscrizione al precedente sia conclusa, viene aggiunto ad una queue. In questo modo l'ordine delle chiamate è garantito
     //switchMap(): l'inner obs sottoscrive solo all'ultimo valore emesso dall'outer obs
     //exhaustMap(): l'inner obs sottoscrive al valore emesso dall'outer solo quando la chiamata della prima sub è conclusa. I valori emessi nel frattempo non vengono considerati
+
+    // this.listAllAddress$.pipe(
+    //   map(resp => resp.resp.addressList),
+    //   mergeMap((res: Address[]) =>{
+    //
+    //   })
+    // )
   }
 }
