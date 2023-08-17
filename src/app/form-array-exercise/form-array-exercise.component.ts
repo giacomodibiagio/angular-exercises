@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AbstractControl, FormArray, FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {AbstractControl, UntypedFormArray, UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-form-array-exercise',
@@ -62,14 +62,14 @@ import {AbstractControl, FormArray, FormBuilder, FormGroup, Validators} from "@a
   `]
 })
 export class FormArrayExerciseComponent {
-  form: FormGroup;
-  users: FormArray;
+  form: UntypedFormGroup;
+  users: UntypedFormArray;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: UntypedFormBuilder) {
     this.form = this.fb.group({
       users: this.fb.array([ ]) as AbstractControl
     });
-    this.users = this.form.get('users') as FormArray;
+    this.users = this.form.get('users') as UntypedFormArray;
     this.addUser();
   }
 

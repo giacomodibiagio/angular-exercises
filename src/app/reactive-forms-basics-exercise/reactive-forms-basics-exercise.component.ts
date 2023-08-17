@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
+import {UntypedFormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-reactive-forms-basics-exercise',
@@ -76,7 +76,7 @@ import {FormBuilder, Validators} from "@angular/forms";
 })
 export class ReactiveFormsBasicsExerciseComponent {
 
-  constructor(private formBuilder:FormBuilder){}
+  constructor(private formBuilder:UntypedFormBuilder){}
 
   form = this.formBuilder.group({
     firstName:[''],

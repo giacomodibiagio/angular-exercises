@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {UntypedFormBuilder, UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-custom-pipe-exercise',
@@ -53,7 +53,7 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 })
 export class CustomPipeExerciseComponent {
 
-  constructor(private formBuilder:FormBuilder){}
+  constructor(private formBuilder:UntypedFormBuilder){}
 
   value: number | undefined
   unit: 'MB' | 'Bytes' = 'MB'
@@ -63,7 +63,7 @@ export class CustomPipeExerciseComponent {
     type:[''],
   })
 
-  update(form: FormGroup) {
+  update(form: UntypedFormGroup) {
     this.value = form.get('memory')?.value;
     this.unit = form.get('type')?.value;
   }
