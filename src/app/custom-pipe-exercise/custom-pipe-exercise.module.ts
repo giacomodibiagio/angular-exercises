@@ -4,11 +4,11 @@ import {RouterModule} from "@angular/router";
 import {CustomPipeExerciseComponent} from "./custom-pipe-exercise.component";
 import { FormatPipe } from './format.pipe';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {MatCardModule} from "@angular/material/card";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatRadioModule} from "@angular/material/radio";
-import {MatButtonModule} from "@angular/material/button";
-import {MatInputModule} from "@angular/material/input";
+import {MatLegacyCardModule as MatCardModule} from "@angular/material/legacy-card";
+import {MatLegacyFormFieldModule as MatFormFieldModule} from "@angular/material/legacy-form-field";
+import {MatLegacyRadioModule as MatRadioModule} from "@angular/material/legacy-radio";
+import {MatLegacyButtonModule as MatButtonModule} from "@angular/material/legacy-button";
+import {MatLegacyInputModule as MatInputModule} from "@angular/material/legacy-input";
 
 
 
