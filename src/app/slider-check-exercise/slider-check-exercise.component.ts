@@ -3,7 +3,11 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 @Component({
   selector: 'app-slider-check-exercise',
   template: `
-    <input [disabled]="disable" type="range" [ngClass]="{'disabled': disable}" [(ngModel)]="value" [max]="maxValue" [min]="0" class="pullee" />
+    <mat-card>
+      <mat-card-content>
+        <input [disabled]="disable" type="range" [ngClass]="{'disabled': disable}" [(ngModel)]="value" [max]="maxValue" [min]="0" class="pullee" />
+      </mat-card-content>
+    </mat-card>
   `,
   styleUrls: ['./slider-check-exercise.component.scss']
 })

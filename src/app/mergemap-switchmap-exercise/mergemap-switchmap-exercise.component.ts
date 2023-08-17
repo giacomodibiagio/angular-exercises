@@ -8,8 +8,12 @@ import {delay, fromEvent, map, merge, mergeAll, mergeMap} from "rxjs";
 @Component({
   selector: 'app-mergemap-switchmap-exercise',
   template:  `
-    <button #btn>Load user info</button>
-  `,
+    <mat-card>
+      <mat-card-content>
+        <button #btn>Load user info</button>
+      </mat-card-content>
+    </mat-card>
+   `,
   styles:  [``]
 })
 export class MergemapSwitchmapExerciseComponent implements AfterViewInit {

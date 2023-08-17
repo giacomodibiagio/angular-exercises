@@ -5,9 +5,13 @@ import {map} from "rxjs";
 @Component({
   selector: 'app-observables-exercise',
   template: `
-    <div>hello {{userName | async}}</div>
+    <mat-card>
+      <mat-card-content>
+        <div>hello {{userName | async}}</div>
 
-    <div *ngFor="let film of favFilms | async">{{film.title}}</div>
+        <div *ngFor="let film of favFilms | async">{{film.title}}</div>
+      </mat-card-content>
+    </mat-card>
   `,
   styles: [``]
 })

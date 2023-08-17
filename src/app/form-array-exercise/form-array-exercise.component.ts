@@ -8,40 +8,42 @@ import {AbstractControl, UntypedFormArray, UntypedFormBuilder, UntypedFormGroup,
 
     <form [formGroup]="form" class="form-container">
       <mat-card>
-        <!--header-->
-        <mat-card-header>
-          <mat-card-title>Insert user</mat-card-title>
-        </mat-card-header>
+        <mat-card-content>
+          <!--header-->
+          <mat-card-header>
+            <mat-card-title>Insert user</mat-card-title>
+          </mat-card-header>
 
-        <!--content-->
-        <ng-container formArrayName="users" *ngFor="let user of users.controls; let i = index; let last = last">
-          <div [formGroupName]="i" class="form-group form-inline">
-            <div class="row">
-              <div class="col-md-5">
-                <mat-form-field class="full-width">
-                  <input formControlName="firstName" matInput placeholder="First name">
-                </mat-form-field>
-              </div>
-              <div class="col-md-5">
-                <mat-form-field class="full-width">
-                  <input  formControlName="lastName" matInput placeholder="Last name">
-                </mat-form-field>
-              </div>
-              <div class="col-md-1 icon">
-                <mat-icon (click)="addUser()" *ngIf="user?.valid && last">add_circle</mat-icon>
-              </div>
-              <div class="col-md-1 icon">
-                <mat-icon (click)="removeUser(user)" *ngIf="users.controls.length > 1">remove_circle</mat-icon>
+          <!--content-->
+          <ng-container formArrayName="users" *ngFor="let user of users.controls; let i = index; let last = last">
+            <div [formGroupName]="i" class="form-group form-inline">
+              <div class="row">
+                <div class="col-md-5">
+                  <mat-form-field class="full-width">
+                    <input formControlName="firstName" matInput placeholder="First name">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-5">
+                  <mat-form-field class="full-width">
+                    <input  formControlName="lastName" matInput placeholder="Last name">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-1 icon">
+                  <mat-icon (click)="addUser()" *ngIf="user?.valid && last">add_circle</mat-icon>
+                </div>
+                <div class="col-md-1 icon">
+                  <mat-icon (click)="removeUser(user)" *ngIf="users.controls.length > 1">remove_circle</mat-icon>
+                </div>
               </div>
             </div>
-          </div>
-        </ng-container>
+          </ng-container>
 
-        <!--buttons-->
-        <br>
-        <mat-card-actions>
-          <button (click)="submit()" [disabled]="form.invalid" mat-raised-button color="primary">Submit</button>
-        </mat-card-actions>
+          <!--buttons-->
+          <br>
+          <mat-card-actions>
+            <button (click)="submit()" [disabled]="form.invalid" mat-raised-button color="primary">Submit</button>
+          </mat-card-actions>
+        </mat-card-content>
       </mat-card>
     </form>
 

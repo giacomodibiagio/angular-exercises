@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import {RouterModule} from "@angular/router";
 import {CustomDirectiveExerciseComponent} from "./custom-directive-exercise.component";
 import { ColorChangeDirective } from './color-change.directive';
-import {MatLegacyCardModule as MatCardModule} from "@angular/material/legacy-card";
-import {MatLegacyButtonModule as MatButtonModule} from "@angular/material/legacy-button";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 
 

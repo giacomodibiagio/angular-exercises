@@ -7,29 +7,30 @@ import {UntypedFormBuilder, UntypedFormGroup} from "@angular/forms";
 
     <form [formGroup]="form" class="form-container">
     <mat-card>
-      <!--header-->
-      <mat-card-header>
-        <mat-card-title>Format memory</mat-card-title>
-      </mat-card-header>
+      <mat-card-content>
+        <!--header-->
+        <mat-card-header>
+          <mat-card-title>Format memory</mat-card-title>
+        </mat-card-header>
 
-      <!--content-->
-      <div class="row">
-        <div class="col-md-6">
-          <mat-form-field class="full-width">
-            <input type="number" formControlName="memory" matInput placeholder="memory">
-          </mat-form-field>
+        <!--content-->
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field class="full-width">
+              <input type="number" formControlName="memory" matInput placeholder="memory">
+            </mat-form-field>
+          </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <mat-radio-group  formControlName="type" class="margin-left">
-            <mat-radio-button value="MB"> MB </mat-radio-button>
-            <mat-radio-button value="Bytes"> Bytes </mat-radio-button>
-          </mat-radio-group>
+        <div class="row">
+          <div class="col-md-12">
+            <mat-radio-group  formControlName="type" class="margin-left">
+              <mat-radio-button value="MB"> MB </mat-radio-button>
+              <mat-radio-button value="Bytes"> Bytes </mat-radio-button>
+            </mat-radio-group>
+          </div>
         </div>
-      </div>
-
+      </mat-card-content>
     </mat-card>
   </form>
 

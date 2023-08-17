@@ -4,13 +4,15 @@ import { Component } from '@angular/core';
   selector: 'app-custom-directive-exercise',
   template: `
     <mat-card>
-      <div>
-        <h1 [appColorChange]=newColor>Custom color change directive</h1>
-      </div>
-      <br>
-      <mat-card-actions>
-        <button (click)="changeColor()" mat-raised-button color="primary">Change color</button>
-      </mat-card-actions>
+      <mat-card-content>
+        <div>
+          <h1 [appColorChange]=newColor>Custom color change directive</h1>
+        </div>
+        <br>
+        <mat-card-actions>
+          <button (click)="changeColor()" mat-raised-button color="primary">Change color</button>
+        </mat-card-actions>
+      </mat-card-content>
     </mat-card>
   `,
   styles: ['']

@@ -4,25 +4,29 @@ import {FilmListService} from "./film-list.service";
 @Component({
   selector: 'app-observables-list-exercise',
   template: `
-    <h4>Watch List</h4>
+    <mat-card>
+      <mat-card-content>
+        <h4>Watch List</h4>
 
-    <div>
+        <div>
 
-      <app-film-list
-        *ngFor="let item of watchList | slice:0:maxItemsShown; index as i; first as f; last as l"
-        [item]="item"
-        [first]="f"
-        [last]="l"
-        (up)="moveItemUp(i)"
-        (down)="moveItemDown(i)"
-      ></app-film-list>
+          <app-film-list
+            *ngFor="let item of watchList | slice:0:maxItemsShown; index as i; first as f; last as l"
+            [item]="item"
+            [first]="f"
+            [last]="l"
+            (up)="moveItemUp(i)"
+            (down)="moveItemDown(i)"
+          ></app-film-list>
 
-      <button
-        (click)="showAll()"
-        *ngIf="maxItemsShown < watchList.length"
-        class="btn btn-info">Show All...</button>
+          <button
+            (click)="showAll()"
+            *ngIf="maxItemsShown < watchList.length"
+            class="btn btn-info">Show All...</button>
 
-    </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
   `,
   styles: [``]
 })

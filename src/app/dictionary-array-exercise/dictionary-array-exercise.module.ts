@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {DictionaryArrayExerciseComponent} from "./dictionary-array-exercise.component";
 import {RouterModule} from "@angular/router";
-import {MatLegacyListModule as MatListModule} from "@angular/material/legacy-list";
+import {MatListModule} from "@angular/material/list";
 import {MatGridListModule} from "@angular/material/grid-list";
-import {MatLegacyCardModule as MatCardModule} from "@angular/material/legacy-card";
+import {MatCardModule} from "@angular/material/card";
 
 
 
