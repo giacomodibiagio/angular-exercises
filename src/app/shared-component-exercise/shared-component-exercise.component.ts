@@ -3,21 +3,42 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-shared-component-exercise',
   template: `
-      <div class="layout">
-          <app-custom-button [label]="buttonLabel" (clickEvent)="onButtonClick()"></app-custom-button>
-      </div>
+    <div class="layout">
+      <app-custom-button
+        [label]="buttonLabel"
+        (clickEvent)="onButtonClick()"
+      ></app-custom-button>
+      <app-custom-input
+        label="Enter your text"
+        (valueChange)="onInputValueChange($event)"
+      ></app-custom-input>
+    </div>
   `,
-  styles: [`
+  styles: [
+    `
       .layout {
-          display: flex;
-          justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 20px;
       }
-  `]
+    `,
+  ],
 })
 export class SharedComponentExerciseComponent {
-    buttonLabel = 'Click me';
+  buttonLabel = 'Click me';
 
-    onButtonClick() {
-        console.log('clicked')
-    }
+  /**
+   * Handles button click event
+   */
+  onButtonClick(): void {
+    // Prints 'clicked' to the console
+    console.log('clicked');
+  }
+
+  onInputValueChange(value: string) {
+    console.log('Updated value:', value);
+    // Perform any other logic with the updated value
+  }
 }
